@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+ box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+ background-image: linear-gradient(to right, #de5ed6, #f8dcf6, #de5ed6);
+ font-family: 'Roboto', sans-serif;
+ margin: 0;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator {
+ background-color: black;
+ box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+ border-radius: 5px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ padding: 5px;
+ width: 250px;
+ height: 390px;  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.display {
+ background-color: black;
+ font-size: 36px;
+ position: relative;
+ color: white;
+ width: 100%;
+ height: 70px;
+ text-align: right;
+ padding: 20px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.nums-container {
+ width: 75%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ops-container {
+ width: 25%;
+}
+
+button {
+ font-size: 20px;
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ border: none;
+ cursor: pointer;
+ margin: 5px;
+}
+
+button:hover {
+ opacity: 0.7;
+}
+
+button:active {
+ transform: scale(0.9);
+}
+
+button:focus {
+ outline: none;
+}
+
+button.largeHorizontal {
+ width: 110px;
+ border-radius: 50px;
+}
+
+button.largeVertical {
+ height: 110px;
+ border-radius: 50px;
+}
+
+button.orange {
+ background-color: #EE9406;
+ color: white;
+}
+
+button.dark-grey {
+ background-color: #323232;
+ color: white;
+}
+
+button.light-grey {
+ background-color: #A5A5A5;
+ color: black;
+}
+
+button.ac {
+ margin-right: 50%;
+}
+
+.author {
+ font-family: 'Open Sans', sans-serif;
+ font-size: 12px;
 }
